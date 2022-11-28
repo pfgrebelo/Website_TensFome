@@ -33,17 +33,17 @@ try {
     //Server settings
     $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
     $mail->isSMTP();                                            //Send using SMTP
-    $mail->Host       = 'smtp.sapo.pt';                     //Set the SMTP server to send through
+    $mail->Host       = 'smtp_host';                     //Set the SMTP server to send through
     $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-    $mail->Username   = 'pedrocesae@sapo.pt';                     //SMTP username
-    $mail->Password   = 'P4ssw0rd+';                               //SMTP password
+    $mail->Username   = 'smtp_username';                     //SMTP username
+    $mail->Password   = 'smtp_password';                               //SMTP password
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
-    $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+    $mail->Port       = 'port';                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
     $mail->CharSet = 'UTF-8';
 
     //Recipients
-    $mail->setFrom('pedrocesae@sapo.pt', 'Admin');
-    $mail->addAddress('pedrocesae@sapo.pt', $from);     //Add a recipient
+    $mail->setFrom('mail', 'Admin');
+    $mail->addAddress('mail', $from);     //Add a recipient
 
     //Content
     $mail->isHTML(true);                                  //Set email format to HTML
