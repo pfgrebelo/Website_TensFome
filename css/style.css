@@ -1,0 +1,299 @@
+:root{
+    --primcolor: #3282B8;
+    --seccolor: #F9F7F7;
+    --thrdcolor: #BBE1FA;
+    --offcanvas-width: 100px;
+}
+
+body{
+    font-family: 'Rubik', sans-serif;
+    background-image: url("../img/misc/background.jpg");
+  background-repeat: repeat;
+  background-size: cover;
+  background-color: #cccccc;
+}
+
+header{
+    background-color: var(--primcolor);
+    margin-bottom: -3%;
+    position: sticky;
+    top: 0;
+    z-index:10;
+}
+
+.logo{
+    margin-bottom: -4%;
+}
+
+nav{
+    margin-top: 4%;
+    background-color: var(--primcolor);
+}
+
+nav a{
+    color: var(--seccolor);
+}
+
+#offcanvasMenu{
+    width: 13rem;
+}
+
+
+.offcanvas-header{
+    background-color: var(--thrdcolor);
+    color: #1B262C;
+    
+    
+}
+
+.offcanvas-body{
+    background-color: var(--primcolor);
+    color: var(--seccolor);
+    
+}
+
+
+main{
+    margin-top: 4%;
+    background-color: var(--thrdcolor);
+    color: #1B262C;
+}
+
+/*FUNDO DA DESCRIÇÃO DO SLIDER*/
+.carousel-caption{
+    background-color: var(--primcolor);
+}
+
+.btn{
+    background-color: var(--primcolor);
+    border: 1;
+    border-color: white;
+}
+
+.btn:hover{
+    background-color: var(--thrdcolor);
+    color: black;
+    border: 1;
+    border-color: black;
+}
+
+/*AJUSTA TAMANHOS DOS CARDS DE ACORDO COM O TAMANHO DA PAGINA*/
+
+@media only screen and (max-width: 1800px) {
+    .card-text{
+        min-height: 30px;
+    }
+    .card-img-top{
+        max-height: 135px;
+      }
+  }
+@media only screen and (max-width: 1200px) {
+    .card-text{
+        min-height: 30px;
+    }
+    .card-img-top{
+        max-height: 105px;
+      }
+  }
+@media only screen and (max-width: 990px) {
+    .card-text{
+        min-height: 30px;
+    }
+    .card-img-top{
+        max-height: 105px;
+      }
+  }
+@media only screen and (max-width: 766px) {
+    .card-text{
+        min-height: 30px;
+    }
+    .card-img-top{
+        max-height: 165px;
+      }
+  }
+  
+
+#account_btn_cancel, #account_btn_save, #account_btn_delete{
+    display: none;
+}
+#form-id{
+    display: none;
+}
+#form-img{
+    max-width: 200px;
+}
+
+h1{
+    font-weight:bold;
+    background: linear-gradient(to top, black, var(--primcolor));
+    background-clip: initial;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+h2{
+    text-align: center;
+}
+h3{
+    text-align: left;
+}
+
+.modal-header{
+    background-color: var(--primcolor);
+    color: var(--seccolor);
+}
+
+.modal-body{
+    background-color: var(--thrdcolor);
+    
+}
+
+.modal-body h6{
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+footer{
+    background-color: var(--primcolor);
+    color: var(--seccolor);
+}
+
+.footerMenu{
+    font-size: 0.8em;
+    border: 0px solid var(--seccolor);
+    color: var(--seccolor);
+    padding: 5px;
+    border-radius: 50;
+}
+
+.footerMenu:hover{
+    border: 0px solid var(--primcolor);
+    color:var(--primcolor);
+    background-color: var(--seccolor);
+}
+
+footer i{
+    font-size: 1.1em;
+    border: 2px solid var(--seccolor);
+    color: var(--seccolor);
+    padding: 5px;
+    border-radius: 50;
+}
+footer i:hover{
+    border: 2px solid var(--primcolor);
+    color:var(--primcolor);
+    background-color: var(--seccolor);
+}
+.icons {
+    display:inline-flex;
+    justify-content: center;
+}
+
+.icons a {
+    width: 60px;
+    filter: drop-shadow(0px 0px 1px #4b4b50);
+    animation: flutuar 3s linear infinite;
+}
+.icons a:hover {
+    width: 60px;
+    filter: drop-shadow(0px 0px 1px #4b4b50);
+    animation: flutuar 0s linear infinite;
+}
+
+@keyframes flutuar {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-6px);
+    }
+}
+
+.icons a:nth-child(2) {
+    animation-delay: .2s;
+}
+
+.icons a:nth-child(3) {
+    animation-delay: .4s;
+}
+
+.icons a:nth-child(4) {
+    animation-delay: .6s;
+}
+
+.icons a:nth-child(5) {
+    animation-delay: .8s;
+}
+.icons a:nth-child(6) {
+    animation-delay: 1.0s;
+}
+
+.loader {
+    width: 48px;
+    height: 24px;
+    color: #FFF;
+    background: currentColor;
+    border-radius: 50% 50% 0 0;
+    position: relative;
+    display: block;
+    margin: 60px auto 0;
+    box-sizing: border-box;
+    animation: animloader 4s linear infinite;
+  }
+  .loader::after {
+    content: '';  
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: currentColor;
+    top: -34px;
+    box-sizing: border-box;
+    animation: animloader1 4s linear infinite;
+  }
+  
+  @keyframes animloader {
+    0% {
+      box-shadow: 0 0 0 -2px , 0 0 0 -2px , 0 0 0 -5px , 0 0 0 -5px;
+    }
+    20% {
+      box-shadow: 40px -1px 0 -2px , 0 0 0 -2px , 40px -1px 0 -5px , 0 0 0 -5px;
+    }
+    40% {
+      box-shadow: 40px -1px 0 -2px , -40px -1px 0 -2px ,  40px -1px 0 -5px ,-40px -1px 0 -5px;
+    }
+    60% {
+      box-shadow: 40px -1px 0 -2px , -40px -1px 0 -2px ,   23px -29px 0 -5px ,-40px -1px 0 -5px;
+    }
+    80%, 95% {
+      box-shadow: 40px -1px 0 -2px , -40px -1px 0 -2px ,   23px -29px 0 -5px , -23px -29px 0 -5px;
+    }
+    100% {
+      box-shadow: 40px -1px 0 -2px rgba(255, 255, 255, 0), -40px -1px 0 -2px rgba(255, 255, 255, 0), 23px -29px 0 -5px rgba(255, 255, 255, 0), -23px -29px 0 -5px rgba(255, 255, 255, 0);
+    }
+  }
+  
+  @keyframes animloader1 {
+    0% {
+      box-shadow: 0 0 0 -2px , 0 0 0 -2px , 0 0 0 -5px , 0 0 0 -5px;
+    }
+    20% {
+      box-shadow: 40px 2px 0 -2px  , 0 0 0 -2px , 40px 2px 0 -5px , 0 0 0 -5px;
+    }
+    40% {
+      box-shadow: 40px 2px 0 -2px  , -40px 2px 0 -2px , 40px 2px 0 -5px , -40px 2px 0 -5px;
+    }
+    60% {
+      box-shadow: 40px 2px 0 -2px  , -40px 2px 0 -2px , 23px -23px 0 -5px , -40px 2px 0 -5px;
+    }
+    80%, 95% {
+      box-shadow: 40px 2px 0 -2px  , -40px 2px 0 -2px , 23px -23px 0 -5px , -23px -23px 0 -5px;
+    }
+    100% {
+      box-shadow: 40px 2px 0 -2px rgba(255, 255, 255, 0), -40px 2px 0 -2px rgba(255, 255, 255, 0), 23px -23px 0 -5px rgba(255, 255, 255, 0), -23px -23px 0 -5px rgba(255, 255, 255, 0);
+    }
+  }
